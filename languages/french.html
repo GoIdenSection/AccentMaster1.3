@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>AccentMaster - Franska</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="logo"><h1>AccentMaster 🇫🇷</h1></a>
+    </header>
+
+    <main class="practice-container">
+        <div class="progress-container">
+            <div class="progress-bar" id="levelProgress"></div>
+            <div id="levelInfo"></div>
+        </div>
+        
+        <div class="word-display" id="currentWord"></div>
+        
+        <div class="controls">
+            <button onclick="speech.playWord()" class="control-btn">🔊 Spela upp</button>
+            <button onclick="speech.startRecording()" class="control-btn">🎤 Spela in</button>
+            <button onclick="app.nextWord()" class="control-btn">➡️ Nästa ord</button>
+        </div>
+
+        <div class="result-container" id="result"></div>
+        <div class="star-counter">⭐ <span id="starCount">0</span></div>
+    </main>
+
+    <script src="../scripts/app.js"></script>
+    <script src="../scripts/evaluation.js"></script>
+    <script src="../scripts/speech.js"></script>
+    <script>
+        const app = new AccentMaster('fr');
+        const evaluator = new PronunciationEvaluator('fr-FR');
+        let currentWord = null;
+
+        function updateUI() {
+            // Uppdatera gränssnittet här
+        }
+        
+        window.onload = () => {
+            currentWord = app.getNextWord();
+            document.getElementById('currentWord').textContent = currentWord;
+        };
+    </script>
+</body>
+</html>
