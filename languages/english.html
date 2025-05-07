@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AccentMaster - Engelska</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body data-lang="en">
+    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+        <div class="loading-spinner"></div>
+        <p>Loading exercise...</p>
+    </div>
+
+    <header class="language-header">
+        <a href="../index.html" class="logo-link">
+            <h1>EN AccentMaster - Engelska</h1>
+        </a>
+        <button id="resetButton" class="reset-button">Återställ Progress</button>
+        <div class="level-info">
+            <span id="currentLevel">Level: Easy</span>
+            <span id="progressPercentage">0% completed</span>
+        </div>
+    </header>
+
+    <main class="practice-container">
+        <!-- Progress bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <!-- Ordvisning -->
+        <div class="word-card">
+            <div id="currentWord" class="word-display">Select level</div>
+            <div class="word-controls">
+                <button id="playButton" class="control-button">🔊 Spela upp</button>
+                <button id="recordButton" class="control-button">🎤 Spela in</button>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="navigation-controls">
+            <button id="prevButton" class="nav-button">◀️ Föregående</button>
+            <button id="nextButton" class="nav-button">Nästa ➡️</button>
+        </div>
+
+        <!-- Resultat -->
+        <div id="resultContainer" class="result-container">
+            <div id="scoreDisplay" class="score-display">Score: 0%</div>
+            <div id="starsDisplay" class="stars-display">
+                ⭐ Stars: <span id="starsCount">0</span>
+            </div>
+            <div id="feedback" class="feedback-message"></div>
+        </div>
+    </main>
+
+    <script type="module" src="../scripts/language-practice.js"></script>
+</body>
+</html>

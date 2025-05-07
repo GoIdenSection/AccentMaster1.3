@@ -4,37 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AccentMaster - Välj Språk</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-    <header>
-        <a href="index.html" class="logo"><h1>AccentMaster 🌍</h1></a>
-    </header>
+    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+        <div class="loading-spinner"></div>
+        <p>Laddar övning...</p>
+    </div>
     
+    <header class="language-header">
+        <a href="index.html" class="logo-link">
+            <h1>AccentMaster 💬</h1>
+        </a>
+        <button id="globalResetButton" class="reset-button">Återställ All Progress</button>
+    </header>
+
     <main class="language-select">
         <h2>Välj övningsspråk:</h2>
         <div class="language-grid">
-            <a href="languages/english.html" class="language-card" data-lang="en">
+            <a href="./languages/english.html" class="language-card">
                 <span class="flag">🇬🇧</span>
                 <h3>Engelska</h3>
+                <p>Börja öva</p>
             </a>
-            <a href="languages/french.html" class="language-card" data-lang="fr">
+            <a href="./languages/french.html" class="language-card">
                 <span class="flag">🇫🇷</span>
                 <h3>Franska</h3>
+                <p>Börja öva</p>
             </a>
-            <a href="languages/spanish.html" class="language-card" data-lang="es">
+            <a href="./languages/spanish.html" class="language-card">
                 <span class="flag">🇪🇸</span>
                 <h3>Spanska</h3>
+                <p>Börja öva</p>
             </a>
-            <a href="languages/german.html" class="language-card" data-lang="de">
+            <a href="./languages/german.html" class="language-card">
                 <span class="flag">🇩🇪</span>
                 <h3>Tyska</h3>
+                <p>Börja öva</p>
             </a>
-            <a href="languages/italian.html" class="language-card" data-lang="it">
+            <a href="./languages/italian.html" class="language-card">
                 <span class="flag">🇮🇹</span>
                 <h3>Italienska</h3>
+                <p>Börja öva</p>
             </a>
         </div>
     </main>
+    <script src="scripts/global-reset.js"></script>
+    <script>
+        document.getElementById('globalResetButton').addEventListener('click', resetAllProgress);
+    </script>
+    <footer>
+        <p>© 2023 AccentMaster · <a href="privacy.html">Integritetspolicy</a></p>
+    </footer>
 </body>
 </html>

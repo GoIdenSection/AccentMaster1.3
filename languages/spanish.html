@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AccentMaster - Spanska</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body data-lang="es">
+    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+        <div class="loading-spinner"></div>
+        <p>Cargando ejercicio...</p>
+    </div>
+    
+    <header class="language-header">
+        <a href="../index.html" class="logo-link">
+            <h1>🇪🇸 AccentMaster - Spanska</h1>
+        </a>
+        <button id="resetButton" class="reset-button">Återställ Progress</button>
+        <div class="level-info">
+            <span id="currentLevel">Nivel: Principiante</span>
+            <span id="progressPercentage">0% completado</span>
+        </div>
+    </header>
+
+    <main class="practice-container">
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        
+        <div class="word-card">
+            <div id="currentWord" class="word-display">Selecciona nivel</div>
+            <div class="word-controls">
+                <button id="playButton" class="control-button">🔊 Escuchar</button>
+                <button id="recordButton" class="control-button">🎤 Grabar</button>
+            </div>
+        </div>
+
+        <div class="navigation-controls">
+            <button id="prevButton" class="nav-button">◀️ Anterior</button>
+            <button id="nextButton" class="nav-button">Siguiente ➡️</button>
+        </div>
+
+        <div id="resultContainer" class="result-container">
+            <div id="scoreDisplay" class="score-display">Puntuación: 0%</div>
+            <div id="starsDisplay" class="stars-display">
+                ⭐ Estrellas: <span id="starsCount">0</span>
+            </div>
+            <div id="feedback" class="feedback-message"></div>
+        </div>
+    </main>
+
+    <script type="module" src="../scripts/language-practice.js"></script>
+</body>
+</html>
